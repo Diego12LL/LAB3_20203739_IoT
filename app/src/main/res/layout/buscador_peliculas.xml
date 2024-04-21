@@ -141,7 +141,7 @@
     <LinearLayout
         android:id="@+id/seccion2"
         android:layout_width="match_parent"
-        android:layout_height="281dp"
+        android:layout_height="212dp"
         android:layout_below="@id/seccion1"
         android:layout_marginTop="1dp"
         android:gravity="center"
@@ -193,6 +193,7 @@
 
             android:layout_marginTop="1dp"
             android:orientation="horizontal">
+
             <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -281,7 +282,6 @@
 
                 </LinearLayout>
             </ScrollView>
-
 
 
         </LinearLayout>
