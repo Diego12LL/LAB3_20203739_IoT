@@ -1,18 +1,16 @@
 package com.example.lab3_20203739;
+
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -27,11 +25,12 @@ import java.net.URL;
 
 public class BuscadorActivity extends AppCompatActivity {
 
-    private TextView pelicula,director, actores, fecha, genero, escritor, descripcion, intMocRat, rotTomRat, metaRat;
+    private TextView pelicula, director, actores, fecha, genero, escritor, descripcion, intMocRat, rotTomRat, metaRat;
+    private CheckBox checkBoxConforme;
+    private Button botonRegresar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.buscador_peliculas);
         pelicula = findViewById(R.id.titulo);
@@ -44,7 +43,28 @@ public class BuscadorActivity extends AppCompatActivity {
         intMocRat = findViewById(R.id.ratIntMovDat);
         rotTomRat = findViewById(R.id.ratRotTom);
         metaRat = findViewById(R.id.ratMetacritic);
+        checkBoxConforme = findViewById(R.id.checkBoxConforme);
+        botonRegresar = findViewById(R.id.botonRegresar);
+        botonRegresar.setVisibility(View.GONE);
 
+        checkBoxConforme.setOnCheckedChangeListener(new CheckBox.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    botonRegresar.setVisibility(View.VISIBLE);
+                } else {
+                    botonRegresar.setVisibility(View.GONE);
+                }
+            }
+        });
+
+        botonRegresar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(BuscadorActivity.this, InicioActivity.class);
+                startActivity(intent);
+            }
+        });
 
         Intent intent = getIntent();
         String idPelicula = intent.getStringExtra("ID_PELICULA");
@@ -129,6 +149,4 @@ public class BuscadorActivity extends AppCompatActivity {
             }
         }
     }
-
-
 }

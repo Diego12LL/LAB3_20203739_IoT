@@ -36,9 +36,9 @@
         <Button
             android:id="@+id/botonVisualizar"
             android:layout_width="148dp"
-            android:layout_height="wrap_content"
+            android:layout_height="81dp"
             android:backgroundTint="#D7BDE2"
-            android:text="Visualizar" />
+            android:text="Observar" />
 
     </LinearLayout>
 
