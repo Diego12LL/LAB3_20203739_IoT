@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#85929E">
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="match_parent"
+        android:layout_height="98dp"
+        android:background="#D7BDE2 "
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="BIENVENIDOS AL LABORATORIO 3 DE IoT!!!"
+        android:textColor="#ffffff"
+        android:textSize="18sp" />
+
+
+    <LinearLayout
+        android:id="@+id/seccion1"
+        android:layout_width="match_parent"
+        android:layout_height="107dp"
+        android:layout_below="@id/titulo"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/textoHola"
+            android:layout_width="213dp"
+            android:layout_height="wrap_content"
+            android:text="Contador de Números Primos: Podrá visualizar los 999 números primos."
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/botonVisualizar"
+            android:layout_width="148dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#D7BDE2"
+            android:text="Visualizar" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/seccion2"
+        android:layout_width="match_parent"
+        android:layout_height="398dp"
+        android:layout_below="@id/seccion1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/textoBuscador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Buscador de películas"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/imagenBuscador"
+            android:layout_width="290dp"
+            android:layout_height="324dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/uzumaki" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/seccion3"
+        android:layout_width="match_parent"
+        android:layout_height="144dp"
+        android:layout_below="@id/seccion2"
+        android:layout_marginTop="23dp"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <EditText
+            android:id="@+id/editTextBusqueda"
+            android:layout_width="379dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="idPelícula (IMDB)"
+            android:textColor="#000000" />
+
+        <Button
+            android:id="@+id/botonBuscar"
+            android:layout_width="124dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#D7BDE2"
+            android:text="Buscar" />
+
+    </LinearLayout>
+
+</RelativeLayout>
