@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -37,6 +39,9 @@ public class ContadorActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.contador);
+
+        showToast("Contador de números primos");
+
         textoNumerosPrimos = findViewById(R.id.textoNumerosPrimos);
         botonAscDesc = findViewById(R.id.botosAscDesc);
         botonReinPaus = findViewById(R.id.botonReinPaus);
@@ -175,4 +180,9 @@ public class ContadorActivity extends AppCompatActivity {
             Log.e(TAG, "El número ingresado está fuera de rango.");
         }
     }
+
+    private void showToast(String message) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+    }
+
 }

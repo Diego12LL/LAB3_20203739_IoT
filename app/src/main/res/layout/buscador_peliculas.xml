@@ -172,7 +172,7 @@
                     android:id="@+id/idDescripcion"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="temaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa "
+                    android:text="No se encontró información "
                     android:textColor="#000000"
                     android:textSize="18sp" />
             </ScrollView>
@@ -225,7 +225,7 @@
                             android:id="@+id/ratIntMovDat"
                             android:layout_width="130dp"
                             android:layout_height="24dp"
-                            android:text="91%"
+                            android:text="-"
                             android:textColor="#000000"
                             android:textSize="18sp" />
                     </LinearLayout>
@@ -250,7 +250,7 @@
                             android:id="@+id/ratRotTom"
                             android:layout_width="130dp"
                             android:layout_height="24dp"
-                            android:text="91%"
+                            android:text="-"
                             android:textColor="#000000"
                             android:textSize="18sp" />
                     </LinearLayout>
@@ -275,7 +275,7 @@
                             android:id="@+id/ratMetacritic"
                             android:layout_width="130dp"
                             android:layout_height="24dp"
-                            android:text="91%"
+                            android:text="-"
                             android:textColor="#000000"
                             android:textSize="18sp" />
                     </LinearLayout>

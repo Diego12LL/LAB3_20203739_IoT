@@ -32,6 +32,9 @@ public class BuscadorActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        showToast("Buscador de Películas");
+
         setContentView(R.layout.buscador_peliculas);
         pelicula = findViewById(R.id.titulo);
         director = findViewById(R.id.idDirector);
@@ -148,5 +151,8 @@ public class BuscadorActivity extends AppCompatActivity {
                 Toast.makeText(BuscadorActivity.this, "Error al obtener la información de la película", Toast.LENGTH_SHORT).show();
             }
         }
+    }
+    private void showToast(String message) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
 }
